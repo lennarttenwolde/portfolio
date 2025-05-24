@@ -125,7 +125,7 @@ const Skills = () => {
                                 <div className="relative">
                                     <div className="w-full bg-slate-200 rounded-full h-2">
                                         <div
-                                            className={`h-2 rounded-full bg-gradient-to-r ${activeSkills.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' :
+                                            className={`h-2 rounded-full bg-linear-to-r ${activeSkills.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' :
                                                 activeSkills.color === 'text-emerald-600' ? 'from-emerald-500 to-emerald-600' :
                                                     activeSkills.color === 'text-purple-600' ? 'from-purple-500 to-purple-600' :
                                                         'from-orange-500 to-orange-600'

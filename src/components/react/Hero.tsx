@@ -6,9 +6,9 @@ const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background with gradient overlay */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-slate-900/80 to-emerald-800/90 z-10"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-emerald-900/90 via-slate-900/80 to-emerald-800/90 z-10"></div>
                 {/* Replace with your outdoor/travel background image */}
-                <div className="w-full h-full bg-gradient-to-br from-emerald-800 to-slate-800"></div>
+                <div className="w-full h-full bg-linear-to-br from-emerald-800 to-slate-800"></div>
             </div>
 
             {/* Animated background elements */}
@@ -37,7 +37,7 @@ const Hero = () => {
                 {/* Main heading */}
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                     <span className="block mb-2">Freelance</span>
-                    <span className="block bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
+                    <span className="block bg-linear-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
                         Software Engineer
                     </span>
                 </h1>
@@ -95,7 +95,9 @@ const Hero = () => {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent z-10"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-36 bg-linear-to-t  from-white to-transparent to-80% z-10"></div>
+
+
         </section>
     );
 };

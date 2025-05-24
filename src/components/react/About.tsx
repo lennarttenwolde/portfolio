@@ -89,7 +89,7 @@ const About = () => {
 
                     {/* Profile image placeholder */}
                     <div className="relative">
-                        <div className="aspect-square bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl shadow-2xl relative overflow-hidden">
+                        <div className="aspect-square bg-linear-to-br from-emerald-400 to-emerald-600 rounded-2xl shadow-2xl relative overflow-hidden">
                             {/* Placeholder for your professional photo */}
                             <div className="absolute inset-0 flex items-center justify-center text-white text-6xl font-light">
                                 📸

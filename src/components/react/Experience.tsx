@@ -102,7 +102,7 @@ const Experience = () => {
                 {/* Experience timeline */}
                 <div className="relative">
                     {/* Timeline line */}
-                    <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-emerald-500 to-emerald-300 hidden md:block"></div>
+                    <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-linear-to-b from-emerald-500 to-emerald-300 hidden md:block"></div>
 
                     <div className="space-y-12">
                         {experiences.map((exp, index) => (
@@ -132,7 +132,7 @@ const Experience = () => {
                                     </div>
 
                                     {/* Highlight */}
-                                    <div className="bg-gradient-to-r from-emerald-50 to-blue-50 border-l-4 border-emerald-500 p-4 mb-6 rounded-r-lg">
+                                    <div className="bg-linear-to-r from-emerald-50 to-blue-50 border-l-4 border-emerald-500 p-4 mb-6 rounded-r-lg">
                                         <div className="flex items-center gap-2 text-emerald-700 font-medium">
                                             <Zap className="w-4 h-4" />
                                             Key Achievement
@@ -146,7 +146,7 @@ const Experience = () => {
                                         <ul className="space-y-2">
                                             {exp.achievements.map((achievement, i) => (
                                                 <li key={i} className="flex items-start gap-3">
-                                                    <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                                                    <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 shrink-0"></div>
                                                     <span className="text-slate-700">{achievement}</span>
                                                 </li>
                                             ))}
@@ -175,7 +175,7 @@ const Experience = () => {
 
                 {/* CTA */}
                 <div className="text-center mt-16">
-                    <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
+                    <div className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
                         <span>Ready to discuss your project?</span>
                         <TrendingUp className="w-5 h-5" />
                     </div>

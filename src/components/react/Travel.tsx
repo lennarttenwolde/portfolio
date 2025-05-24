@@ -171,7 +171,7 @@ const Travel = () => {
                 </div>
 
                 {/* Travel philosophy */}
-                <div className="text-center bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white">
+                <div className="text-center bg-linear-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white">
                     <Plane className="w-12 h-12 mx-auto mb-4 opacity-80" />
                     <h3 className="text-2xl font-bold mb-4">Travel Philosophy</h3>
                     <p className="text-lg leading-relaxed max-w-3xl mx-auto">
