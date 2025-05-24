@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/react/Hero.tsx";
+import About from "../components/react/About.tsx";
+import Skills from "../components/react/Skills.tsx";
+import Experience from "../components/react/Experience.tsx";
+import Travel from "../components/react/Travel.tsx";
+import Contact from "../components/react/Contact.tsx";
+---
+
+<Layout title="Ten Wolde | Freelance Software Engineer & Digital Nomad">
+	<main>
+		<Hero client:load />
+		<About client:load />
+		<Skills client:load />
+		<Experience client:load />
+		<Travel client:load />
+		<Contact client:load />
+	</main>
+</Layout>
