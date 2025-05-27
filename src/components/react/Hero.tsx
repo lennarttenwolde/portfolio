@@ -56,7 +56,7 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
-                        {['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker'].map((skill) => (
+                        {['.NET', 'React', 'Python', 'Azure', 'DevOps'].map((skill) => (
                             <span
                                 key={skill}
                                 className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-all duration-300"
