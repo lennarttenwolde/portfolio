@@ -46,6 +46,19 @@ const Travel = () => {
         '🇲🇦 Morocco', '🇪🇬 Egypt', '🇿🇦 South Africa', '🇺🇸 USA', '🇨🇦 Canada'
     ];
 
+    const handleStoryClick = (index: number) => {
+        setActiveStory(index);
+        // On mobile, scroll to the detail view after a short delay
+        if (window.innerWidth < 1024) {
+            setTimeout(() => {
+                document.getElementById('story-detail')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    };
+
     return (
         <section className="py-20 bg-slate-50" id="adventures">
             <div className="max-w-6xl mx-auto px-6">
@@ -61,19 +74,19 @@ const Travel = () => {
                 </div>
 
                 {/* Adventure stories */}
-                <div className="grid lg:grid-cols-2 gap-8 mb-16">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 mb-16">
                     {/* Story selector */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 order-2 lg:order-1">
                         {adventures.map((adventure, index) => (
                             <div
                                 key={index}
-                                onClick={() => setActiveStory(index)}
+                                onClick={() => handleStoryClick(index)}
                                 className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${activeStory === index
                                     ? 'bg-emerald-500 text-white shadow-lg scale-105'
                                     : 'bg-white text-slate-700 hover:bg-slate-100'
                                     }`}
                             >
-                                <div className="flex items-center gap-4 mb-3">
+                                <div className="flex items-center gap-4">
                                     <span className="text-2xl">{adventure.image}</span>
                                     <div>
                                         <h3 className="font-bold text-lg">{adventure.title}</h3>
@@ -83,23 +96,12 @@ const Travel = () => {
                                         </div>
                                     </div>
                                 </div>
-                                {activeStory === index && (
-                                    <div className="mt-4 pt-4 border-t border-white/20">
-                                        <p className="text-sm leading-relaxed mb-3">{adventure.story}</p>
-                                        <div className="bg-white/10 rounded-lg p-3 mb-3">
-                                            <p className="text-sm italic">"{adventure.lesson}"</p>
-                                        </div>
-                                        <div className="text-xs font-medium bg-white/10 rounded px-2 py-1 inline-block">
-                                            {adventure.tech}
-                                        </div>
-                                    </div>
-                                )}
                             </div>
                         ))}
                     </div>
 
-                    {/* Active story display */}
-                    <div className="bg-white rounded-2xl shadow-lg p-8">
+                    {/* Active story display - now shown on all screen sizes */}
+                    <div id="story-detail" className="bg-white rounded-2xl shadow-lg p-8 order-1 lg:order-2">
                         <div className="text-center mb-6">
                             <div className="text-6xl mb-4">{adventures[activeStory].image}</div>
                             <h3 className="text-2xl font-bold text-slate-900 mb-2">
@@ -171,7 +173,7 @@ const Travel = () => {
                 </div>
 
                 {/* Travel philosophy */}
-                <div className="text-center bg-linear-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white">
+                <div className="text-center bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white">
                     <Plane className="w-12 h-12 mx-auto mb-4 opacity-80" />
                     <h3 className="text-2xl font-bold mb-4">Travel Philosophy</h3>
                     <p className="text-lg leading-relaxed max-w-3xl mx-auto">
