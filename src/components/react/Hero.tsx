@@ -51,8 +51,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-slate-200 leading-relaxed">
-                        Crafting scalable digital solutions while exploring the world.
-                        Specializing in modern web technologies and bringing ideas to life.
+                        Scaling your ideas into real solutions, wherever I'm working today.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
