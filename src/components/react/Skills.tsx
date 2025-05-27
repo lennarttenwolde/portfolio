@@ -4,7 +4,7 @@ import { Code, Database, Cloud, Smartphone, Wrench, Lightbulb } from 'lucide-pre
 const Skills = () => {
     const [activeCategory, setActiveCategory] = useState('frontend');
 
-    const skillCategories = {
+    const skillCategories: Record<string, any> = {
         frontend: {
             icon: Code,
             title: 'Frontend Development',
@@ -50,19 +50,19 @@ const Skills = () => {
                 { name: 'Linux', level: 85, years: '4+' }
             ]
         },
-        mobile: {
-            icon: Smartphone,
-            title: 'Mobile Development',
-            color: 'text-orange-600',
-            bgColor: 'bg-orange-50',
-            borderColor: 'border-orange-200',
-            skills: [
-                { name: 'React Native', level: 80, years: '2+' },
-                { name: 'Flutter', level: 75, years: '1+' },
-                { name: 'iOS Development', level: 70, years: '1+' },
-                { name: 'Progressive Web Apps', level: 88, years: '3+' }
-            ]
-        }
+        // mobile: {
+        //     icon: Smartphone,
+        //     title: 'Mobile Development',
+        //     color: 'text-orange-600',
+        //     bgColor: 'bg-orange-50',
+        //     borderColor: 'border-orange-200',
+        //     skills: [
+        //         { name: 'React Native', level: 80, years: '2+' },
+        //         { name: 'Flutter', level: 75, years: '1+' },
+        //         { name: 'iOS Development', level: 70, years: '1+' },
+        //         { name: 'Progressive Web Apps', level: 88, years: '3+' }
+        //     ]
+        // }
     };
 
     const tools = [
@@ -116,26 +116,30 @@ const Skills = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
-                        {activeSkills.skills.map((skill, index) => (
+                        {activeSkills.skills.map((skill: { name: string, level: number, years: string }) => (
                             <div key={skill.name} className="space-y-3">
                                 <div className="flex justify-between items-center">
                                     <span className="font-medium text-slate-900">{skill.name}</span>
                                     <span className="text-sm text-slate-500">{skill.years} years</span>
                                 </div>
+
                                 <div className="relative">
-                                    <div className="w-full bg-slate-200 rounded-full h-2">
+                                    <div className="w-full bg-slate-200 rounded-full h-4">
                                         <div
-                                            className={`h-2 rounded-full bg-linear-to-r ${activeSkills.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' :
-                                                activeSkills.color === 'text-emerald-600' ? 'from-emerald-500 to-emerald-600' :
-                                                    activeSkills.color === 'text-purple-600' ? 'from-purple-500 to-purple-600' :
-                                                        'from-orange-500 to-orange-600'
+                                            className={`h-4 rounded-full bg-linear-to-r relative flex items-center justify-center
+                                                ${activeSkills.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' :
+                                                    activeSkills.color === 'text-emerald-600' ? 'from-emerald-500 to-emerald-600' :
+                                                        activeSkills.color === 'text-purple-600' ? 'from-purple-500 to-purple-600' :
+                                                            'from-orange-500 to-orange-600'
                                                 } transition-all duration-1000 ease-out`}
                                             style={{ width: `${skill.level}%` }}
-                                        />
+                                        >
+                                            <span className="text-xs font-medium text-white">
+                                                {skill.level}%
+                                            </span>
+                                        </div>
                                     </div>
-                                    <span className="absolute right-0 -top-6 text-xs font-medium text-slate-500">
-                                        {skill.level}%
-                                    </span>
+
                                 </div>
                             </div>
                         ))}
