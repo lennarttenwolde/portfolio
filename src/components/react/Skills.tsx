@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Code, Database, Cloud, Smartphone, Wrench, Lightbulb } from 'lucide-react';
+import { useState } from 'preact/hooks';
+import { Code, Database, Cloud, Smartphone, Wrench, Lightbulb } from 'lucide-preact';
 
 const Skills = () => {
     const [activeCategory, setActiveCategory] = useState('frontend');

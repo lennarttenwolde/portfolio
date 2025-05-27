@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, MessageSquare, Phone, MapPin, Clock, Send, CheckCircle, Calendar } from 'lucide-react';
+
+import { Mail, MessageSquare, Phone, MapPin, Clock, Send, CheckCircle, Calendar } from 'lucide-preact';
 
 const Contact = () => {
 

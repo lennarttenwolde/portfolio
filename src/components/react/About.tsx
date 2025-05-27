@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code, Mountain, Plane, Coffee, Users, Zap } from 'lucide-react';
+
+import { Code, Mountain, Plane, Coffee, Users, Zap } from 'lucide-preact';
 
 const About = () => {
     const highlights = [

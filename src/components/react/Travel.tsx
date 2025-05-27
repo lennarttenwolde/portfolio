@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MapPin, Camera, Mountain, Plane, Compass, Globe } from 'lucide-react';
+import { useState } from 'preact/hooks';
+import { MapPin, Camera, Mountain, Plane, Compass, Globe } from 'lucide-preact';
 
 const Travel = () => {
     const [activeStory, setActiveStory] = useState(0);
