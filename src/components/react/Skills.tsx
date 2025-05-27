@@ -96,7 +96,7 @@ const Skills = () => {
                             <button
                                 key={key}
                                 onClick={() => setActiveCategory(key)}
-                                className={`flex items-center gap-3 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${isActive
+                                className={`flex items-center gap-3 px-6 py-3 rounded-lg font-medium transition-all duration-300 cursor-pointer ${isActive
                                     ? `${category.bgColor} ${category.color} ${category.borderColor} border-2`
                                     : 'bg-white text-slate-600 border-2 border-slate-200 hover:border-slate-300'
                                     }`}
@@ -123,23 +123,22 @@ const Skills = () => {
                                     <span className="text-sm text-slate-500">{skill.years} years</span>
                                 </div>
 
+
                                 <div className="relative">
-                                    <div className="w-full bg-slate-200 rounded-full h-4">
+                                    <div className="w-full bg-slate-200 rounded-full h-3.5">
                                         <div
-                                            className={`h-4 rounded-full bg-linear-to-r relative flex items-center justify-center
-                                                ${activeSkills.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' :
+                                            className={`h-3.5 rounded-full bg-linear-to-r
+                ${activeSkills.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' :
                                                     activeSkills.color === 'text-emerald-600' ? 'from-emerald-500 to-emerald-600' :
                                                         activeSkills.color === 'text-purple-600' ? 'from-purple-500 to-purple-600' :
                                                             'from-orange-500 to-orange-600'
                                                 } transition-all duration-1000 ease-out`}
                                             style={{ width: `${skill.level}%` }}
-                                        >
-                                            <span className="text-xs font-medium text-white">
-                                                {skill.level}%
-                                            </span>
-                                        </div>
+                                        />
                                     </div>
-
+                                    <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-white">
+                                        {skill.level}%
+                                    </span>
                                 </div>
                             </div>
                         ))}
