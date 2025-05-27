@@ -3,6 +3,16 @@ import LinkedIn from './icons/LinkedIn';
 import Github from './icons/Github';
 
 const Hero = () => {
+
+    const goToId = (id: string) => {
+        setTimeout(() => {
+            document.getElementById(id)?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 100);
+    };
+
     return (
         <div>
 
@@ -58,10 +68,10 @@ const Hero = () => {
 
                     {/* Call to action buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <button className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <button onClick={() => goToId('experience')} className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
                             View My Work
                         </button>
-                        <button className="px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10">
+                        <button onClick={() => goToId('contact')} className="px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 cursor-pointer">
                             Let's Connect
                         </button>
                     </div>
@@ -71,16 +81,29 @@ const Hero = () => {
                         {[
                             { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
                             { icon: LinkedIn, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-                            { icon: Mail, href: 'mailto:hello@tenwolde.dev', label: 'Email' }
                         ].map(({ icon: Icon, href, label }) => (
                             <a
                                 key={label}
                                 href={href}
-                                className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 group"
+                                className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 group cursor-pointer"
                                 aria-label={label}
+                                target="_blank"
                             >
                                 <Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                             </a>
+                        ))}
+                        {[
+                            { icon: Mail, label: 'Email', onClick: () => goToId('contact') }
+                            ,
+                        ].map(({ icon: Icon, label, onClick }) => (
+                            <button
+                                key={label}
+                                onClick={onClick}
+                                className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 group cursor-pointer"
+                                aria-label={label}
+                            >
+                                <Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                            </button>
                         ))}
                     </div>
 
