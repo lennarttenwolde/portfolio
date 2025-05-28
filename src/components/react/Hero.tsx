@@ -55,7 +55,7 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
-                        {['.NET', 'React', 'Python', 'Azure', 'DevOps'].map((skill) => (
+                        {['.NET', 'React', 'Vue', 'Python', 'Azure', 'DevOps'].map((skill) => (
                             <span
                                 key={skill}
                                 className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-all duration-300"
@@ -106,9 +106,9 @@ const Hero = () => {
                         ))}
                     </div>
 
-                    <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <button onClick={() => goToId('about')} className="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
                         <ArrowDown className="w-6 h-6 text-white/60" />
-                    </div>
+                    </button>
                 </div>
 
 
