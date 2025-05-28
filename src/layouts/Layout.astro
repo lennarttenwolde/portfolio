@@ -6,6 +6,8 @@ export interface Props {
 	description?: string;
 }
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
 const {
 	title,
 	description = "Freelance Software Engineer specializing in modern web development. Passionate about creating scalable solutions while exploring the world.",
@@ -20,6 +22,9 @@ const {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
@@ -38,45 +43,27 @@ const {
 			content="https://tenwolde.dev/og-image.jpg"
 		/>
 
+		<link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
 
+		<meta
+			name="robots"
+			content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+		/>
+
+		<meta name="color-scheme" content="light" />
+
+		<meta name="application-name" content="Ten Wolde Dev" />
+
 		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
 			rel="stylesheet"
-		/>
+		/> -->
 	</head>
 	<body class="bg-slate-50 text-slate-900 font-sans antialiased">
 		<slot />
-
-		<style is:global>
-			html {
-				font-family: "Inter", system-ui, sans-serif;
-			}
-
-			.font-mono {
-				font-family: "JetBrains Mono", monospace;
-			}
-
-			/* Custom scrollbar */
-			::-webkit-scrollbar {
-				width: 8px;
-			}
-
-			::-webkit-scrollbar-track {
-				background: #f1f5f9;
-			}
-
-			::-webkit-scrollbar-thumb {
-				background: #cbd5e1;
-				border-radius: 4px;
-			}
-
-			::-webkit-scrollbar-thumb:hover {
-				background: #94a3b8;
-			}
-		</style>
 	</body>
 </html>

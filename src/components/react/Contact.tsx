@@ -48,8 +48,6 @@ const Contact = () => {
 
                             <span className="text-xs">(humans only - you got this)</span>
                         </div>
-
-
                     </div>
                 </div>
 

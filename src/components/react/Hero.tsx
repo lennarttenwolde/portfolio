@@ -67,10 +67,10 @@ const Hero = () => {
 
                     {/* Call to action buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <button onClick={() => goToId('experience')} className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
+                        <button onClick={() => goToId('experience')} aria-label="View my work" className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
                             View My Work
                         </button>
-                        <button onClick={() => goToId('contact')} className="px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 cursor-pointer">
+                        <button onClick={() => goToId('contact')} aria-label="Go to contact info" className="px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 cursor-pointer">
                             Let's Connect
                         </button>
                     </div>
@@ -106,7 +106,7 @@ const Hero = () => {
                         ))}
                     </div>
 
-                    <button onClick={() => goToId('about')} className="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
+                    <button onClick={() => goToId('about')} aria-label="Scroll down" className="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
                         <ArrowDown className="w-6 h-6 text-white/60" />
                     </button>
                 </div>

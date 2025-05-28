@@ -238,7 +238,7 @@ const Experience = () => {
 
                 {/* CTA */}
                 <div className="text-center mt-16">
-                    <button onClick={() => goToId('contact')} className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
+                    <button onClick={() => goToId('contact')} aria-label="Go to contact info" className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
                         <span>Ready to discuss your project?</span>
                         <TrendingUp className="w-5 h-5" />
                     </button>

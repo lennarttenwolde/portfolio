@@ -118,6 +118,7 @@ const Skills = () => {
                             <button
                                 key={key}
                                 onClick={() => setActiveCategory(key)}
+                                aria-label={`View ${category.title} skills`}
                                 className={`flex items-center gap-3 px-6 py-3 rounded-lg font-medium transition-all duration-300 cursor-pointer ${isActive
                                     ? `${category.bgColor} ${category.color} ${category.borderColor} border-2`
                                     : 'bg-white text-slate-600 border-2 border-slate-200 hover:border-slate-300'
