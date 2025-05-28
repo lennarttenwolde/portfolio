@@ -1,5 +1,5 @@
 
-import { Mail, MessageSquare, Phone, MapPin, Clock, Send, CheckCircle, Calendar } from 'lucide-preact';
+import { Mail, MessageSquare } from 'lucide-preact';
 import Github from './icons/Github';
 import LinkedIn from './icons/LinkedIn';
 
@@ -38,9 +38,18 @@ const Contact = () => {
                 </div>
 
                 <div className="flex flex-col gap-6 justify-center items-center  mb-16">
-                    <div className="text-slate-900 italic flex gap-2 items-center" >
-                        <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                        <span>hello@<span className="text-slate-500">[thisdomain]</span>.dev</span>
+                    <div className="text-slate-900 italic" >
+
+                        <div className="flex flex-col items-center">
+                            <div className="flex items-center gap-2 mb-2">
+                                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                                <span>hello@<span className="text-slate-500">[thisdomain]</span>.dev</span>
+                            </div>
+
+                            <span className="text-xs">(humans only - you got this)</span>
+                        </div>
+
+
                     </div>
                 </div>
 
