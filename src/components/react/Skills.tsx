@@ -36,11 +36,9 @@ const Skills = () => {
                 { name: 'Entity Framework ', level: 85, years: '5+' },
                 { name: 'Event-driven architecture', level: 85, years: '5+' },
                 { name: 'Serverless', level: 95, years: '5+' },
-                { name: 'Auth0', level: 75, years: '2+' },
                 { name: 'GraphQL', level: 80, years: '1+' },
                 { name: 'SignalR', level: 80, years: '2+' },
                 { name: 'Go', level: 62, years: '1+' },
-                { name: 'REST APIs', level: 95, years: '5+' },
                 { name: 'Unit / Integration Testing', level: 88, years: '5+' }
             ]
         },
@@ -54,12 +52,12 @@ const Skills = () => {
                 { name: 'Azure', level: 85, years: '5+' },
                 { name: 'Docker', level: 88, years: '3+' },
                 { name: 'Kubernetes / AKS', level: 75, years: '3+' },
-                { name: 'App Hosting', level: 85, years: '5+' },
                 { name: 'Azure Storage Services', level: 92, years: '5+' },
                 { name: 'Helm', level: 82, years: '3+' },
                 { name: 'CI/CD', level: 95, years: '5+' },
                 { name: 'ARM / Bicep', level: 90, years: '5+' },
                 { name: 'Linux', level: 80, years: '4+' },
+                { name: 'Cloudflare', level: 65, years: '1+' },
             ]
         },
         mobile: {
