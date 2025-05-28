@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { Code, Database, Cloud, Smartphone, Wrench, Lightbulb } from 'lucide-preact';
+import { Code, Database, Cloud, Smartphone, Wrench, Lightbulb, Sparkles } from 'lucide-preact';
 
 const Skills = () => {
     const [activeCategory, setActiveCategory] = useState('frontend');
@@ -12,12 +12,15 @@ const Skills = () => {
             bgColor: 'bg-blue-50',
             borderColor: 'border-blue-200',
             skills: [
-                { name: 'React', level: 95, years: '4+' },
+                { name: 'Vue.js', level: 95, years: '4+' },
                 { name: 'TypeScript', level: 90, years: '3+' },
-                { name: 'Vue.js', level: 85, years: '2+' },
-                { name: 'Next.js', level: 88, years: '3+' },
+                { name: 'React', level: 85, years: '2+' },
+                { name: 'Nuxt.js', level: 80, years: '1+' },
                 { name: 'Tailwind CSS', level: 92, years: '3+' },
-                { name: 'JavaScript (ES6+)', level: 95, years: '5+' }
+                { name: 'JavaScript (ES5+)', level: 95, years: '5+' },
+                { name: 'Blazor', level: 70, years: '1+' },
+                { name: 'Astro', level: 80, years: '1+' },
+
             ]
         },
         backend: {
@@ -27,12 +30,18 @@ const Skills = () => {
             bgColor: 'bg-emerald-50',
             borderColor: 'border-emerald-200',
             skills: [
-                { name: 'Node.js', level: 90, years: '4+' },
-                { name: 'Python', level: 85, years: '3+' },
-                { name: 'PostgreSQL', level: 88, years: '4+' },
-                { name: 'MongoDB', level: 82, years: '3+' },
-                { name: 'GraphQL', level: 80, years: '2+' },
-                { name: 'REST APIs', level: 95, years: '5+' }
+                { name: '.NET', level: 93, years: '5+' },
+                { name: 'Python', level: 80, years: '2+' },
+                { name: 'MSSQL', level: 82, years: '5+' },
+                { name: 'Entity Framework ', level: 85, years: '5+' },
+                { name: 'Event-driven architecture', level: 85, years: '5+' },
+                { name: 'Serverless', level: 85, years: '5+' },
+                { name: 'Auth0', level: 75, years: '2+' },
+                { name: 'GraphQL', level: 80, years: '1+' },
+                { name: 'SignalR', level: 80, years: '2+' },
+                { name: 'GO', level: 62, years: '1+' },
+                { name: 'REST APIs', level: 95, years: '5+' },
+                { name: 'Unit / Integration Testing', level: 88, years: '5+' }
             ]
         },
         cloud: {
@@ -42,32 +51,47 @@ const Skills = () => {
             bgColor: 'bg-purple-50',
             borderColor: 'border-purple-200',
             skills: [
-                { name: 'AWS', level: 85, years: '3+' },
+                { name: 'Azure', level: 85, years: '5+' },
                 { name: 'Docker', level: 88, years: '3+' },
-                { name: 'Kubernetes', level: 75, years: '2+' },
-                { name: 'CI/CD', level: 90, years: '4+' },
-                { name: 'Terraform', level: 70, years: '1+' },
-                { name: 'Linux', level: 85, years: '4+' }
+                { name: 'Kubernetes / AKS', level: 75, years: '3+' },
+                { name: 'App Hosting', level: 85, years: '5+' },
+                { name: 'Azure Storage Services', level: 92, years: '5+' },
+                { name: 'Helm', level: 82, years: '3+' },
+                { name: 'CI/CD', level: 95, years: '5+' },
+                { name: 'ARM / Bicep', level: 90, years: '5+' },
+                { name: 'Linux', level: 80, years: '4+' },
             ]
         },
-        // mobile: {
-        //     icon: Smartphone,
-        //     title: 'Mobile Development',
-        //     color: 'text-orange-600',
-        //     bgColor: 'bg-orange-50',
-        //     borderColor: 'border-orange-200',
-        //     skills: [
-        //         { name: 'React Native', level: 80, years: '2+' },
-        //         { name: 'Flutter', level: 75, years: '1+' },
-        //         { name: 'iOS Development', level: 70, years: '1+' },
-        //         { name: 'Progressive Web Apps', level: 88, years: '3+' }
-        //     ]
-        // }
+        mobile: {
+            icon: Sparkles,
+            title: 'AI',
+            color: 'text-orange-600',
+            bgColor: 'bg-orange-50',
+            borderColor: 'border-orange-200',
+            skills: [
+                { name: 'OpenAI API', level: 80, years: '1+' },
+                { name: 'LangChain', level: 60, years: '1+' },
+                { name: 'Azure Cognitive Services', level: 70, years: '1+' },
+                { name: 'Hugging Face', level: 60, years: '1+' },
+                { name: 'Prompt Engineering', level: 70, years: '1+' },
+
+            ]
+        }
     };
 
     const tools = [
-        'Git & GitHub', 'VS Code', 'Figma', 'Postman', 'Jira', 'Slack',
-        'Vercel', 'Netlify', 'Firebase', 'Stripe', 'Auth0', 'Sentry'
+        'Git & GitHub',
+        'VS Code',
+        'Azure',
+        'Postman',
+        'Azure DevOps',
+        'Auth0',
+        'Docker',
+        'Kubernetes',
+        'Figma',
+        'Swagger',
+        'Jupyter Notebook',
+        'Cloudflare'
     ];
 
     const activeSkills = skillCategories[activeCategory];
@@ -81,8 +105,8 @@ const Skills = () => {
                         Technical <span className="text-emerald-600">Expertise</span>
                     </h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                        A comprehensive toolkit built through years of hands-on experience
-                        and continuous learning in the ever-evolving tech landscape.
+                        My curiosity and adaptability have helped me put together a toolkit that works in any situation.
+                        I'm always on the lookout for better ways to do things.
                     </p>
                 </div>
 
