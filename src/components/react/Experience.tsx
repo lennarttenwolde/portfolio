@@ -87,7 +87,7 @@ const Experience = () => {
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     {stats.map((stat, index) => (
                         <div key={index} className="text-center p-6 bg-slate-50 rounded-xl">
                             <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -97,7 +97,7 @@ const Experience = () => {
                             <div className="text-sm text-slate-600">{stat.label}</div>
                         </div>
                     ))}
-                </div>
+                </div> */}
 
                 {/* Experience timeline */}
                 <div className="relative">

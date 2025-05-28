@@ -35,11 +35,11 @@ const Skills = () => {
                 { name: 'MSSQL', level: 82, years: '5+' },
                 { name: 'Entity Framework ', level: 85, years: '5+' },
                 { name: 'Event-driven architecture', level: 85, years: '5+' },
-                { name: 'Serverless', level: 85, years: '5+' },
+                { name: 'Serverless', level: 95, years: '5+' },
                 { name: 'Auth0', level: 75, years: '2+' },
                 { name: 'GraphQL', level: 80, years: '1+' },
                 { name: 'SignalR', level: 80, years: '2+' },
-                { name: 'GO', level: 62, years: '1+' },
+                { name: 'Go', level: 62, years: '1+' },
                 { name: 'REST APIs', level: 95, years: '5+' },
                 { name: 'Unit / Integration Testing', level: 88, years: '5+' }
             ]
@@ -71,7 +71,7 @@ const Skills = () => {
             skills: [
                 { name: 'OpenAI API', level: 80, years: '1+' },
                 { name: 'LangChain', level: 60, years: '1+' },
-                { name: 'Azure Cognitive Services', level: 70, years: '1+' },
+                { name: 'Azure Cognitive Services', level: 72, years: '1+' },
                 { name: 'Hugging Face', level: 60, years: '1+' },
                 { name: 'Prompt Engineering', level: 70, years: '1+' },
 
