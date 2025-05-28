@@ -40,10 +40,31 @@ const Travel = () => {
     ];
 
     const countries = [
-        '🇳🇱 Netherlands', '🇩🇪 Germany', '🇨🇭 Switzerland', '🇫🇷 France', '🇮🇹 Italy',
-        '🇪🇸 Spain', '🇵🇹 Portugal', '🇬🇧 UK', '🇳🇴 Norway', '🇸🇪 Sweden',
-        '🇮🇩 Indonesia', '🇹🇭 Thailand', '🇻🇳 Vietnam', '🇯🇵 Japan', '🇰🇷 South Korea',
-        '🇲🇦 Morocco', '🇪🇬 Egypt', '🇿🇦 South Africa', '🇺🇸 USA', '🇨🇦 Canada'
+        '🇳🇱 Netherlands',
+        '🇩🇪 Germany',
+        '🇧🇪 Belgium',
+        '🇱🇺 Luxembourg',
+        '🇫🇷 France',
+        '🇮🇹 Italy',
+        '🇪🇸 Spain',
+        '🇵🇹 Portugal',
+        '🇬🇧 UK',
+        '🇨🇿 Czech Republic',
+        '🇦🇹 Austria',
+        '🇸🇮 Slovenia',
+        '🇭🇷 Croatia',
+        '🇷🇸 Serbia',
+        '🇧🇦 Bosnia and Herzegovina',
+        '🇲🇰 North Macedonia',
+        '🇬🇷 Greece',
+        '🇹🇷 Turkey',
+        '🇮🇩 Indonesia',
+        '🇹🇭 Thailand',
+        '🇱🇦 Laos',
+        '🇲🇾 Malaysia',
+        '🇲🇦 Morocco',
+        '🇿🇦 South Africa',
+        '🇺🇸 USA'
     ];
 
     const handleStoryClick = (index: number) => {
