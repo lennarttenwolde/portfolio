@@ -6,12 +6,24 @@ import Skills from "../components/react/Skills.tsx";
 import Experience from "../components/react/Experience.tsx";
 import Travel from "../components/react/Travel.tsx";
 import Contact from "../components/react/Contact.tsx";
+
+import { Image } from "astro:assets";
+
+import me from "../assets/IMG_1594.jpeg";
 ---
 
 <Layout title="Ten Wolde | Freelance Software Engineer & Digital Nomad">
 	<main>
 		<Hero client:load />
-		<About client:load />
+		<About client:load>
+			<Image
+				src={me}
+				alt="This is me"
+				widths={[240, 540, 720, me.width]}
+				sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${me.width}px`}
+				class="absolute inset-0 flex items-center justify-center text-white text-6xl font-light w-full h-full object-cover"
+			/>
+		</About>
 		<Skills client:load />
 		<Experience client:load />
 		<Travel client:load />

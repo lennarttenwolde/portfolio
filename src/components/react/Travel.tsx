@@ -174,7 +174,7 @@ const Travel = () => {
                         <Globe className="w-6 h-6 text-emerald-600" />
                         <h3 className="text-xl font-bold text-slate-900">Countries Explored</h3>
                         <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
-                            20+ destinations
+                            25+ destinations
                         </span>
                     </div>
 
