@@ -6,36 +6,33 @@ const Travel = () => {
 
     const adventures = [
         {
-            title: 'Coding from the Swiss Alps',
-            location: 'Zermatt, Switzerland',
-            image: '🏔️',
-            story: 'Spent 3 months working remotely from a cozy chalet with the Matterhorn as my backdrop. The crisp mountain air and stunning views taught me that inspiration can come from the most unexpected places. Built one of my most innovative solutions while hiking trails during breaks.',
-            lesson: 'Sometimes the best debugging happens on mountain trails.',
-            tech: 'Built a weather-responsive web app for local hiking guides'
+            title: 'Volunteering in South Africa',
+            location: 'Jeffreys Bay, South Africa',
+            image: '🏄',
+            story: 'Volunteered for 3 months at a Timion creating mobility tools for children with cerebral palsy. Visited townships to deliver custom-built armrests and wheelchairs while also catching some waves after work.',
+            lesson: 'Health is everything.',
+            impact: 'Beyond helping the children, giving them more freedom often brings freedom to the entire family.'
         },
         {
-            title: 'Digital Nomad in Bali',
-            location: 'Canggu, Indonesia',
-            image: '🏄‍♂️',
-            story: 'Worked with a distributed team across 5 time zones while learning to surf. The laid-back atmosphere and vibrant co-working community taught me the value of work-life balance and cross-cultural collaboration.',
-            lesson: 'Asynchronous communication is like surfing - it\'s all about timing.',
-            tech: 'Developed real-time collaboration tools for remote teams'
+            title: "The Fisherman's Trail",
+            location: 'Portugal',
+            image: '🌊',
+            story: "Hiked the 11-day Fisherman's Trail along Portugal's coastline. Nothing but ocean views, sand, and good coffee at tiny cafes.",
+            lesson: "Sometimes you have to choose, and bringing the surfboard wasn't an option."
         },
         {
-            title: 'Arctic Coding Adventure',
-            location: 'Tromsø, Norway',
-            image: '🌌',
-            story: 'Chased the Northern Lights while working on a project for 2 months during polar night. The extreme environment taught me resilience and the importance of robust, reliable systems - much like the code we write.',
-            lesson: 'Like the Aurora, the best solutions often appear when conditions seem impossible.',
-            tech: 'Created a low-bandwidth app optimized for remote Arctic locations'
+            title: 'Exploring the E4 Trail',
+            location: 'Crete, Greece',
+            image: '🥾',
+            story: "Walked part of the E4 trail in Crete, sweating it out in the June sun. Olive trees, goat herds, and coastal cliffs. It was hot, dusty, and absolutely beautiful.",
+            lesson: "Just focus on the next step and you'll eventually get there - and use sunscreen!"
         },
         {
-            title: 'Desert Innovation',
-            location: 'Sahara, Morocco',
-            image: '🐪',
-            story: 'Joined a tech retreat in the desert, coding under starlit skies and learning from nomadic cultures. The vastness of the landscape put software problems into perspective and taught me the beauty of minimalism in code.',
-            lesson: 'In the desert, every line of code matters - just like every drop of water.',
-            tech: 'Built offline-first mobile apps for remote communities'
+            title: 'Backpacking Southeast Asia',
+            location: 'Thailand, Laos, Malaysia, Borneo',
+            image: '🎒',
+            story: 'Spent a few months hopping between countries, eating street food, and seeing the incredible jungles of Borneo.',
+            lesson: "There's more than one way to live and that's what makes it fun."
         }
     ];
 
@@ -154,16 +151,18 @@ const Travel = () => {
                                     "{adventures[activeStory].lesson}"
                                 </p>
                             </div>
+                            {adventures[activeStory].impact ? (
+                                <div className="bg-slate-50 rounded-lg p-4" >
+                                    <h4 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                                        <Mountain className="w-4 h-4" />
+                                        Impact
+                                    </h4>
+                                    <p className="text-slate-700">
+                                        {adventures[activeStory].impact}
+                                    </p>
+                                </div>
+                            ) : null}
 
-                            <div className="bg-slate-50 rounded-lg p-4">
-                                <h4 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
-                                    <Mountain className="w-4 h-4" />
-                                    Tech Innovation
-                                </h4>
-                                <p className="text-slate-700">
-                                    {adventures[activeStory].tech}
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,10 +197,9 @@ const Travel = () => {
                     <Plane className="w-12 h-12 mx-auto mb-4 opacity-80" />
                     <h3 className="text-2xl font-bold mb-4">Travel Philosophy</h3>
                     <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-                        "Every journey teaches me something new about adaptability, problem-solving,
-                        and seeing the world from different perspectives. These experiences directly
-                        influence how I approach software development - with curiosity, resilience,
-                        and an understanding that the best solutions often come from unexpected places."
+                        "From missed buses to questionable food choices,
+                        I'm always learning to adapt, think on my feet, and see things from a fresh perspective.
+                        That same mindset flows over into my work, making me curious, eager, flexible, and never afraid to try something different. Because honestly; the best discoveries often happen when you're just a little bit lost"
                     </p>
                 </div>
             </div>
