@@ -1,76 +1,139 @@
 
-import { Building, Calendar, TrendingUp, Users, Zap, Award } from 'lucide-preact';
+import { Building, Calendar, TrendingUp, Users, Zap, Award, Code, Laptop, Globe } from 'lucide-preact';
 
 const Experience = () => {
+    // const experiences = [
+    //     {
+    //         title: 'Senior Full-Stack Developer',
+    //         company: 'Tech Startup (Stealth Mode)',
+    //         period: 'Feb 2025 - May 2025',
+    //         type: 'Freelance Contract',
+    //         location: 'Remote',
+    //         achievements: [
+    //             'Architected and built a scalable SaaS platform serving 10K+ users',
+    //             'Reduced API response times by 60% through optimization and caching strategies',
+    //             'Led technical decision-making for a team of 4 developers',
+    //             'Implemented comprehensive testing suite achieving 95% code coverage'
+    //         ],
+    //         technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
+    //         highlight: 'Built from MVP to production in 8 months'
+    //     },
+    //     {
+    //         title: 'Lead Frontend Developer',
+    //         company: 'Financial Services Company',
+    //         period: '2022 - 2023',
+    //         type: 'Contract',
+    //         location: 'Hybrid (Amsterdam)',
+    //         achievements: [
+    //             'Modernized legacy trading platform used by 500+ financial advisors',
+    //             'Improved user experience leading to 40% increase in platform adoption',
+    //             'Mentored junior developers and established coding standards',
+    //             'Collaborated with UX team to implement accessibility improvements'
+    //         ],
+    //         technologies: ['Vue.js', 'TypeScript', 'Python', 'MongoDB', 'Azure'],
+    //         highlight: 'Successfully migrated critical trading systems with zero downtime'
+    //     },
+    //     {
+    //         title: 'Full-Stack Developer',
+    //         company: 'E-commerce Scale-up',
+    //         period: '2020 - 2022',
+    //         type: 'Full-time',
+    //         location: 'Berlin, Germany',
+    //         achievements: [
+    //             'Built microservices architecture handling 1M+ daily transactions',
+    //             'Developed real-time inventory management system',
+    //             'Integrated payment systems supporting 15+ countries',
+    //             'Optimized checkout flow increasing conversion rate by 25%'
+    //         ],
+    //         technologies: ['React', 'Node.js', 'Kubernetes', 'Redis', 'Stripe'],
+    //         highlight: 'Scaled platform from startup to Series B funding'
+    //     },
+    //     {
+    //         title: 'Software Developer',
+    //         company: 'Digital Agency',
+    //         period: '2019 - 2020',
+    //         type: 'Full-time',
+    //         location: 'Amsterdam, Netherlands',
+    //         achievements: [
+    //             'Delivered 20+ client projects across various industries',
+    //             'Specialized in React and WordPress custom development',
+    //             'Collaborated directly with clients to gather requirements',
+    //             'Maintained 98% client satisfaction rating'
+    //         ],
+    //         technologies: ['React', 'WordPress', 'PHP', 'MySQL', 'AWS'],
+    //         highlight: 'Established foundation in client communication and project management'
+    //     }
+    // ];
     const experiences = [
         {
-            title: 'Senior Full-Stack Developer',
-            company: 'Tech Startup (Stealth Mode)',
-            period: '2023 - Present',
+            title: 'Freelance Software Engineer',
+            company: 'Osmosis Investment Management NL',
+            period: 'Feb 2025 - May 2025',
             type: 'Freelance Contract',
             location: 'Remote',
             achievements: [
-                'Architected and built a scalable SaaS platform serving 10K+ users',
-                'Reduced API response times by 60% through optimization and caching strategies',
-                'Led technical decision-making for a team of 4 developers',
-                'Implemented comprehensive testing suite achieving 95% code coverage'
+                'Set up cloud infrastructure with Azure Bicep and AKS',
+                'Streamlined CI/CD workflows in Azure DevOps for secure and faster releases',
+                'Integrated AI-driven systems for data analysis and processing',
+                'Played a crucial role in delivering a financial product MVP under tight deadlines'
             ],
-            technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
-            highlight: 'Built from MVP to production in 8 months'
+            technologies: ['Azure', 'Azure DevOps', 'Azure OpenAI', 'Bicep', 'Python', 'Blazor'],
+            highlight: 'Delivered high-impact features and cloud architecture in a fast-paced startup environment'
         },
         {
-            title: 'Lead Frontend Developer',
-            company: 'Financial Services Company',
-            period: '2022 - 2023',
-            type: 'Contract',
-            location: 'Hybrid (Amsterdam)',
-            achievements: [
-                'Modernized legacy trading platform used by 500+ financial advisors',
-                'Improved user experience leading to 40% increase in platform adoption',
-                'Mentored junior developers and established coding standards',
-                'Collaborated with UX team to implement accessibility improvements'
-            ],
-            technologies: ['Vue.js', 'TypeScript', 'Python', 'MongoDB', 'Azure'],
-            highlight: 'Successfully migrated critical trading systems with zero downtime'
-        },
-        {
-            title: 'Full-Stack Developer',
-            company: 'E-commerce Scale-up',
-            period: '2020 - 2022',
+            title: 'Senior Software Engineer',
+            company: 'Robeco',
+            period: '2020 - 2024',
             type: 'Full-time',
-            location: 'Berlin, Germany',
+            location: 'Hybrid',
             achievements: [
-                'Built microservices architecture handling 1M+ daily transactions',
-                'Developed real-time inventory management system',
-                'Integrated payment systems supporting 15+ countries',
-                'Optimized checkout flow increasing conversion rate by 25%'
+                'Migrating a monolithic trading platform to a cloud-based microservices architecture',
+                'Automated deployments and testing in CI/CD pipelines for consistent quality',
+                'Collaborated directly with Microsoft engineers to design and set up the Kubernetes-based architecture',
+                'Worked seamlessly across frontend (Vue.js) and backend (ASP.NET Core)',
+                'Leveraged Kubernetes and Azure for scalable, reliable deployments',
+                'Promoted to Senior Engineer after impactful technical contributions',
             ],
-            technologies: ['React', 'Node.js', 'Kubernetes', 'Redis', 'Stripe'],
-            highlight: 'Scaled platform from startup to Series B funding'
+            technologies: ['Azure', 'Vue.js', '.NET Core', 'Kubernetes', 'Azure DevOps'],
+            highlight: 'Migrated critical trading systems to a scalable, cloud-native solution'
         },
         {
-            title: 'Software Developer',
-            company: 'Digital Agency',
+            title: 'Junior Full-stack Developer',
+            company: 'Working Talent',
             period: '2019 - 2020',
             type: 'Full-time',
-            location: 'Amsterdam, Netherlands',
+            location: 'Onsite',
             achievements: [
-                'Delivered 20+ client projects across various industries',
-                'Specialized in React and WordPress custom development',
-                'Collaborated directly with clients to gather requirements',
-                'Maintained 98% client satisfaction rating'
+                'Completed a 3-month intensive traineeship (bootcamp) in Full Stack Development',
+                'Earned certifications (PSM-I, MCSA 70-483)',
+                'Contributed to various projects, learning both frontend and backend technologies'
             ],
-            technologies: ['React', 'WordPress', 'PHP', 'MySQL', 'AWS'],
-            highlight: 'Established foundation in client communication and project management'
+            technologies: ['MVC', '.NET', 'Azure', 'SQL Server'],
+            highlight: 'Proudly completed a challenging bootcamp that launched my career in software engineering'
         }
     ];
+    // const stats = [
+    //     // { icon: Building, value: '15+', label: 'Projects Delivered' },
+    //     // { icon: Users, value: '50+', label: 'Clients Served' },
+    //     { icon: TrendingUp, value: '5+', label: 'Years Experience' },
+    //     // { icon: Award, value: '98%', label: 'Client Satisfaction' }
+    // ];
 
     const stats = [
-        { icon: Building, value: '15+', label: 'Projects Delivered' },
-        { icon: Users, value: '50+', label: 'Clients Served' },
-        { icon: TrendingUp, value: '5+', label: 'Years Experience' },
-        { icon: Award, value: '98%', label: 'Client Satisfaction' }
+        { icon: TrendingUp, value: '5', label: 'Years as Developer' },
+        { icon: Building, value: '2', label: 'Major Projects' },
+        { icon: Code, value: '10+', label: 'Key Technologies' },
+        { icon: Globe, value: '5+', label: 'Countries Lived/Worked In' }
     ];
+
+    const goToId = (id: string) => {
+        setTimeout(() => {
+            document.getElementById(id)?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 100);
+    };
 
     return (
         <section className="py-20 bg-white" id="experience">
@@ -87,7 +150,7 @@ const Experience = () => {
                 </div>
 
                 {/* Stats */}
-                {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     {stats.map((stat, index) => (
                         <div key={index} className="text-center p-6 bg-slate-50 rounded-xl">
                             <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -97,7 +160,7 @@ const Experience = () => {
                             <div className="text-sm text-slate-600">{stat.label}</div>
                         </div>
                     ))}
-                </div> */}
+                </div>
 
                 {/* Experience timeline */}
                 <div className="relative">
@@ -175,10 +238,10 @@ const Experience = () => {
 
                 {/* CTA */}
                 <div className="text-center mt-16">
-                    <div className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
+                    <button onClick={() => goToId('contact')} className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
                         <span>Ready to discuss your project?</span>
                         <TrendingUp className="w-5 h-5" />
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>
