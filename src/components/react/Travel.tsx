@@ -6,9 +6,17 @@ const Travel = () => {
 
     const adventures = [
         {
+            title: 'Volunteering in Portugal',
+            location: 'Bombarral, Portugal',
+            image: '🏄',
+            story: 'Volunteered for 2 months at a Amigo Fiel animal shelter. Helped with daily tasks, dog training, and socializing the animals. Spent weekends surfing the beautiful beaches of Peniche and Ericeira.',
+            lesson: 'Small efforts add up.',
+            impact: 'Social media posts and photoshoots were key in finding forever homes for many dogs.'
+        },
+        {
             title: 'Volunteering in South Africa',
             location: 'Jeffreys Bay, South Africa',
-            image: '🏄',
+            image: '🇿🇦',
             story: 'Volunteered for 3 months at a Timion creating mobility tools for children with cerebral palsy. Visited townships to deliver custom-built armrests and wheelchairs while also catching some waves after work.',
             lesson: 'Health is everything.',
             impact: 'Beyond helping the children, giving them more freedom often brings freedom to the entire family.'

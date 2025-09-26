@@ -2,68 +2,6 @@
 import { Building, Calendar, TrendingUp, Users, Zap, Award, Code, Laptop, Globe } from 'lucide-preact';
 
 const Experience = () => {
-    // const experiences = [
-    //     {
-    //         title: 'Senior Full-Stack Developer',
-    //         company: 'Tech Startup (Stealth Mode)',
-    //         period: 'Feb 2025 - May 2025',
-    //         type: 'Freelance Contract',
-    //         location: 'Remote',
-    //         achievements: [
-    //             'Architected and built a scalable SaaS platform serving 10K+ users',
-    //             'Reduced API response times by 60% through optimization and caching strategies',
-    //             'Led technical decision-making for a team of 4 developers',
-    //             'Implemented comprehensive testing suite achieving 95% code coverage'
-    //         ],
-    //         technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
-    //         highlight: 'Built from MVP to production in 8 months'
-    //     },
-    //     {
-    //         title: 'Lead Frontend Developer',
-    //         company: 'Financial Services Company',
-    //         period: '2022 - 2023',
-    //         type: 'Contract',
-    //         location: 'Hybrid (Amsterdam)',
-    //         achievements: [
-    //             'Modernized legacy trading platform used by 500+ financial advisors',
-    //             'Improved user experience leading to 40% increase in platform adoption',
-    //             'Mentored junior developers and established coding standards',
-    //             'Collaborated with UX team to implement accessibility improvements'
-    //         ],
-    //         technologies: ['Vue.js', 'TypeScript', 'Python', 'MongoDB', 'Azure'],
-    //         highlight: 'Successfully migrated critical trading systems with zero downtime'
-    //     },
-    //     {
-    //         title: 'Full-Stack Developer',
-    //         company: 'E-commerce Scale-up',
-    //         period: '2020 - 2022',
-    //         type: 'Full-time',
-    //         location: 'Berlin, Germany',
-    //         achievements: [
-    //             'Built microservices architecture handling 1M+ daily transactions',
-    //             'Developed real-time inventory management system',
-    //             'Integrated payment systems supporting 15+ countries',
-    //             'Optimized checkout flow increasing conversion rate by 25%'
-    //         ],
-    //         technologies: ['React', 'Node.js', 'Kubernetes', 'Redis', 'Stripe'],
-    //         highlight: 'Scaled platform from startup to Series B funding'
-    //     },
-    //     {
-    //         title: 'Software Developer',
-    //         company: 'Digital Agency',
-    //         period: '2019 - 2020',
-    //         type: 'Full-time',
-    //         location: 'Amsterdam, Netherlands',
-    //         achievements: [
-    //             'Delivered 20+ client projects across various industries',
-    //             'Specialized in React and WordPress custom development',
-    //             'Collaborated directly with clients to gather requirements',
-    //             'Maintained 98% client satisfaction rating'
-    //         ],
-    //         technologies: ['React', 'WordPress', 'PHP', 'MySQL', 'AWS'],
-    //         highlight: 'Established foundation in client communication and project management'
-    //     }
-    // ];
     const experiences = [
         {
             title: 'Freelance Software Engineer',
@@ -112,13 +50,6 @@ const Experience = () => {
             highlight: 'Proudly completed a challenging bootcamp that launched my career in software engineering'
         }
     ];
-    // const stats = [
-    //     // { icon: Building, value: '15+', label: 'Projects Delivered' },
-    //     // { icon: Users, value: '50+', label: 'Clients Served' },
-    //     { icon: TrendingUp, value: '5+', label: 'Years Experience' },
-    //     // { icon: Award, value: '98%', label: 'Client Satisfaction' }
-    // ];
-
     const stats = [
         { icon: TrendingUp, value: '5', label: 'Years as Developer' },
         { icon: Building, value: '2', label: 'Major Projects' },
