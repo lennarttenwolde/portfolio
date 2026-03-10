@@ -1,32 +1,188 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/react/Hero.tsx";
-import About from "../components/react/About.tsx";
-import Skills from "../components/react/Skills.tsx";
-import Experience from "../components/react/Experience.tsx";
-import Travel from "../components/react/Travel.tsx";
-import Contact from "../components/react/Contact.tsx";
+import GitHub from "../components/icons/GitHub.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
 
-import { Image } from "astro:assets";
-
-import me from "../assets/IMG_1594.jpeg";
+const projects = [
+	{
+		name: "Dequeueable",
+		url: "https://dequeueable.tenwolde.dev",
+		description:
+			"Cloud-native ephemeral job runner for Azure Queue Storage. One message, one container —  zero boilerplate with no idle compute.",
+		tags: [".NET", "Azure", "KEDA", "Kubernetes", "Open Source"],
+	},
+	{
+		name: "TurboPDF",
+		url: "https://turbopdf.tenwolde.dev",
+		description:
+			"PWA for merging PDFs in the browser —  no install, no IT policy violations, no uploading sensitive documents to a random server.",
+		tags: ["Vue", "TypeScript", "Vite"],
+	},
+];
 ---
 
-<Layout title="Ten Wolde | Freelance Software Engineer & Digital Nomad">
-	<main>
-		<Hero client:load />
-		<About client:load>
-			<Image
-				src={me}
-				alt="This is me"
-				widths={[240, 540, 720, me.width]}
-				sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${me.width}px`}
-				class="absolute inset-0 flex items-center justify-center text-white text-6xl font-light w-full h-full object-cover"
-			/>
-		</About>
-		<Skills client:load />
-		<Experience client:load />
-		<Travel client:load />
-		<Contact client:load />
+<Layout title="Lennart ten Wolde | Fullstack .NET & Vue Engineer">
+	<main class="bg-stone-50 font-mono font-light text-stone-900">
+		<!-- ── Hero ── -->
+		<section class="min-h-screen flex items-center px-6">
+			<div class="max-w-2xl mx-auto w-full py-24 opacity-0 animate-hero">
+				<h1
+					class="font-serif font-normal leading-[1.05] tracking-tight text-stone-900 mb-5 text-6xl md:text-7xl"
+				>
+					Lennart<br />
+					<em class="italic text-orange-700">ten Wolde</em>
+				</h1>
+
+				<ul
+					class="flex flex-wrap items-center text-[0.72rem] uppercase tracking-widest text-stone-500 mb-10 list-none p-0 m-0"
+				>
+					<li>Full-stack .NET &amp; Vue</li>
+					<li class="mx-3 text-stone-500">·</li>
+					<li>Azure</li>
+					<li class="mx-3 text-stone-500">·</li>
+					<li>Cloud DevOps</li>
+				</ul>
+
+				<div class="flex flex-wrap items-center gap-3">
+					<a
+						href="#projects"
+						class="text-[0.72rem] uppercase tracking-wider px-5 py-2.5 rounded-sm bg-stone-900 text-stone-50 border border-stone-900 hover:bg-orange-700 hover:border-orange-700 transition-colors duration-150 no-underline"
+					>
+						View projects
+					</a>
+					<a
+						href="#contact"
+						class="text-[0.72rem] uppercase tracking-wider px-5 py-2.5 rounded-sm bg-transparent text-stone-500 border border-stone-300 hover:text-stone-900 hover:border-stone-900 transition-colors duration-150 no-underline"
+					>
+						Get in touch
+					</a>
+
+					<div class="flex items-center gap-4 ml-1">
+						<a
+							href="https://github.com/lennarttenwolde"
+							target="_blank"
+							rel="noopener"
+							aria-label="GitHub"
+							class="text-stone-500 hover:text-stone-900 transition-colors duration-150"
+						>
+							<GitHub size={20} />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/lennart-ten-wolde/"
+							target="_blank"
+							rel="noopener"
+							aria-label="LinkedIn"
+							class="text-stone-500 hover:text-stone-900 transition-colors duration-150"
+						>
+							<LinkedIn size={20} />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ── Projects ── -->
+		<section id="projects" class="px-6 py-24 border-t border-stone-200">
+			<div class="max-w-2xl mx-auto">
+				<p
+					class="text-[0.7rem] uppercase tracking-[0.14em] text-stone-700 pb-4 mb-8 border-b border-stone-200"
+				>
+					Projects
+				</p>
+
+				<div class="flex flex-col gap-px">
+					{
+						projects.map((project, i) => (
+							<a
+								href={project.url}
+								target="_blank"
+								rel="noopener"
+								class={[
+									"group bg-stone-100 hover:bg-stone-200/70 transition-colors duration-150 no-underline",
+									"grid grid-cols-[1fr_auto] items-center gap-x-6 p-7",
+									i === 0 ? "rounded-t-md" : "",
+									i === projects.length - 1
+										? "rounded-b-md"
+										: "border-b border-stone-200",
+								].join(" ")}
+							>
+								<div>
+									<p class="font-serif font-normal text-xl text-stone-900 mb-1 leading-snug">
+										{project.name}
+									</p>
+									<p class="text-[0.8rem] text-stone-500 leading-relaxed max-w-[46ch]">
+										{project.description}
+									</p>
+									<div class="flex flex-wrap gap-1.5 mt-4">
+										{project.tags.map((tag) => (
+											<span class="text-[0.62rem] uppercase tracking-wider text-stone-400 border border-stone-300 px-2 py-0.5 rounded-sm">
+												{tag}
+											</span>
+										))}
+									</div>
+								</div>
+								<span class="text-stone-400 group-hover:text-orange-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 text-base self-start mt-1">
+									↗
+								</span>
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- ── Contact ── -->
+		<section id="contact" class="px-6 py-24 border-t border-stone-200">
+			<div class="max-w-2xl mx-auto">
+				<p
+					class="text-[0.7rem] uppercase tracking-[0.14em] text-stone-700 pb-4 mb-8 border-b border-stone-200"
+				>
+					Get in touch
+				</p>
+
+				<p class="text-[0.88rem] text-stone-500">
+					<a
+						href="mailto:hello@tenwolde.dev"
+						class="text-stone-900 border-b border-stone-300 hover:text-orange-700 hover:border-orange-700 transition-colors duration-150 no-underline"
+					>
+						hello@tenwolde.dev
+					</a>
+					<span class="mx-3 text-stone-500">·</span>
+					<a
+						href="https://github.com/lennarttenwolde"
+						target="_blank"
+						rel="noopener"
+						class="text-stone-900 border-b border-stone-300 hover:text-orange-700 hover:border-orange-700 transition-colors duration-150 no-underline"
+					>
+						GitHub
+					</a>
+					<span class="mx-3 text-stone-500">·</span>
+					<a
+						href="https://www.linkedin.com/in/lennart-ten-wolde/"
+						target="_blank"
+						rel="noopener"
+						class="text-stone-900 border-b border-stone-300 hover:text-orange-700 hover:border-orange-700 transition-colors duration-150 no-underline"
+					>
+						LinkedIn
+					</a>
+				</p>
+			</div>
+		</section>
 	</main>
 </Layout>
+
+<style>
+	@keyframes heroUp {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.animate-hero {
+		animation: heroUp 0.7s 0.1s ease forwards;
+	}
+</style>
