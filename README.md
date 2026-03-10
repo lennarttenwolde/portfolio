@@ -1,4 +1,4 @@
-x# tenwolde.dev
+# tenwolde.dev
 
 Personal portfolio of me (Lennart ten Wolde) — fullstack .NET & Vue engineer, Azure & Cloud DevOps.
 
