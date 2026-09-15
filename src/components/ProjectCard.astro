@@ -1,0 +1,56 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  description: string;
+  tags: string[];
+  isFirst?: boolean;
+  isLast?: boolean;
+}
+const {
+  name,
+  url,
+  description,
+  tags,
+  isFirst = false,
+  isLast = false,
+} = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener"
+  class={[
+    "group bg-stone-100 hover:bg-stone-200/70 transition-colors duration-150 no-underline",
+    "grid grid-cols-[1fr_auto] items-center gap-x-6 p-7",
+    {
+      "rounded-t-md": isFirst,
+      "rounded-b-md": isLast,
+      "border-b border-stone-200": !isLast,
+    },
+  ].join(" ")}
+>
+  <div>
+    <p class="font-serif font-normal text-xl text-stone-900 mb-1 leading-snug">
+      {name}
+    </p>
+    <p class="text-[0.8rem] text-stone-500 leading-relaxed max-w-[46ch]">
+      {description}
+    </p>
+    <div class="flex flex-wrap gap-1.5 mt-4">
+      {
+        tags.map((tag) => (
+          <span class="text-[0.62rem] uppercase tracking-wider text-stone-400 border border-stone-300 px-2 py-0.5 rounded-sm">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+  <span
+    class="text-stone-400 group-hover:text-orange-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 text-base self-start mt-1"
+  >
+    ↗
+  </span>
+</a>
